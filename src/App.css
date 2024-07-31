@@ -1,38 +1,18 @@
-.App {
-  text-align: center;
+.marquee-container {
+  width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng màn hình */
+  overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+  box-sizing: border-box; /* Bao gồm padding và border trong tính toán kích thước */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 12s linear infinite;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+  
